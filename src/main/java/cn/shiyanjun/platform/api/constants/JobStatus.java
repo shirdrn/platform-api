@@ -9,7 +9,8 @@ public enum JobStatus {
 	SCHEDULED(4),
 	RUNNING(5),
 	SUCCEEDED(6),
-	FAILED(7);
+	FAILED(7),
+	CANCELLED(7);
 	
 	private int code;
 	

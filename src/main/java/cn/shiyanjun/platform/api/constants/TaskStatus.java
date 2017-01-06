@@ -11,7 +11,8 @@ public enum TaskStatus {
     SUBMITTED(3),
     RUNNING(4),
     SUCCEEDED(5),
-    FAILED(6);
+    FAILED(6),
+    CANCELLED(7);
 
     private int code;
 

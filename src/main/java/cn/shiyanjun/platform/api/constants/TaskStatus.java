@@ -12,7 +12,8 @@ public enum TaskStatus {
     RUNNING(4),
     SUCCEEDED(5),
     FAILED(6),
-    CANCELLED(7);
+    CANCELLED(7),
+    TIMEOUT(8);
 
     private int code;
 

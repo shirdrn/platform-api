@@ -3,16 +3,16 @@ package cn.shiyanjun.platform.api.constants;
 public enum JobStatus {
 
 	CREATED(0),
-	SUBMITTED(1),
-	QUEUEING(2),
-	FETCHED(3),
-	SCHEDULED(4),
-	RUNNING(5),
-	SUCCEEDED(6),
-	FAILED(7),
-	CANCELLED(9),
+	QUEUEING(1),
+	SCHEDULED(2),
+	SUBMITTED(3),
+	RUNNING(4),
+	SUCCEEDED(5),
+	FAILED(6),
+	CANCELLED(7),
 	TIMEOUT(8),
-	CANCELLING(7);
+	FETCHED(9),
+	CANCELLING(10);
 	
 	private int code;
 	

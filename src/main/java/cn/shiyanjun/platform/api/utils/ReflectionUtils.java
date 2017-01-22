@@ -2,9 +2,6 @@ package cn.shiyanjun.platform.api.utils;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.util.HashMap;
-import java.util.Map;
 
 public class ReflectionUtils {
 
@@ -92,25 +89,5 @@ public class ReflectionUtils {
             classLoader = DEFAULT_CLASSLOADER;
         }
         return classLoader;
-    }
-
-    private final static Map<String, Method> methodMap = new HashMap<>();
-
-    public static Method getMethod(Class<?> clazz, String methodName, Class<?>... parameterTypes) {
-        String key = clazz + methodName;
-        Method method = methodMap.get(key);
-        if (method == null) {
-            synchronized (clazz) {
-                if (method == null) {
-                    try {
-                        method = clazz.getDeclaredMethod(methodName, parameterTypes);
-                        methodMap.put(key, method);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-        }
-        return method;
     }
 }

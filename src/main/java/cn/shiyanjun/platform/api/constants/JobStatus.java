@@ -1,5 +1,8 @@
 package cn.shiyanjun.platform.api.constants;
 
+import java.util.Optional;
+import java.util.stream.Stream;
+
 public enum JobStatus {
 
 	CREATED(0),
@@ -23,4 +26,10 @@ public enum JobStatus {
 	public int getCode() {
 		return code;
 	}
+	
+	public static Optional<JobStatus> valueOf(int code) {
+        return Stream.of(JobStatus.values())
+        		.filter(jobStatus -> jobStatus.code == code)
+        		.findAny();
+    }
 }

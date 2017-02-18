@@ -25,7 +25,9 @@ public enum TaskStatus {
         return code;
     }
 
-    public static Optional<TaskStatus> valueOfCode(int code) {
-        return Stream.of(TaskStatus.values()).filter(taskStatus -> taskStatus.code == code).findAny();
+    public static Optional<TaskStatus> valueOf(int code) {
+        return Stream.of(TaskStatus.values())
+        		.filter(taskStatus -> taskStatus.code == code)
+        		.findAny();
     }
 }
